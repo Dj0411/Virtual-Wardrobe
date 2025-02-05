@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Virtual Wardrobe</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="branding">
+            <h1>Virtual Wardrobe</h1>
+            <p>Your personal wardrobe assistant</p>
+        </div>
+        <div class="form-container">
+            <h2>Signup</h2>
+            <form action="/auth/signup" method="POST">
+                <div class="input-group">
+                    <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                    <img src="/static/images/gear2.png" id="gear3" class="gear">
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                    <img src="/static/images/gear2.png" id="gear1" class="gear">
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                    <img src="/static/images/gear2.png" id="gear2" class="gear">
+                </div>
+                <button type="submit" id="submit-btn" disabled>Signup</button>
+            </form>
+            <div class="login-link">
+               <a href="/auth/login">Already have an account? Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/animation.js"></script>
+</body>
+</html>

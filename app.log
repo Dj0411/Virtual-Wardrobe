@@ -1,0 +1,27 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 810-158-043
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 810-158-043
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 810-158-043
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:14:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:14:48] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:14:59] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:14:59] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:14:59] "[33mGET /static/D:\\virtualwardrobe\\Virtual-Wardrobe\\uploads\\outfits\\Screenshot%202024-05-21%20154640.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:14:59] "[33mGET /static/outfits/Screenshot%202024-05-21%20154640.png HTTP/1.1[0m" 404 -
+DEBUG:root:User Image: <FileStorage: 'test_user.jpg' ('image/jpeg')>, Outfit Image: <FileStorage: 'test_outfit.jpg' ('image/jpeg')>
+DEBUG:root:User image saved at static\uploads\user\test_user.jpg, Outfit image saved at static\uploads\outfits\test_outfit.jpg
+ERROR:root:No upper body detected in the image.
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:15:19] "[32mPOST /try_on HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:15:19] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:15:19] "[33mGET /static/D:\\virtualwardrobe\\Virtual-Wardrobe\\uploads\\outfits\\Screenshot%202024-05-21%20154640.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 19:15:19] "[33mGET /static/outfits/Screenshot%202024-05-21%20154640.png HTTP/1.1[0m" 404 -

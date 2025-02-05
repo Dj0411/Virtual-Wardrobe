@@ -1,0 +1,204 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-image: url('/static/images/login-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure sign-up/login link is always clickable */
+.sign-up-link, .login-link {
+    position: relative; /* Ensure it's not blocked by other elements */
+    text-align: center;
+    margin-top: 15px;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.sign-up-link, .login-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.sign-up-link a, .login-link a {
+    color: #d4a373;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Move the sign-up/login link inside the form but ensure it is always visible */
+.form-container .sign-up-link, .form-container .login-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Branding (Positioned on the Left) */
+.branding {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: black;
+    text-align: left;
+}
+
+.branding h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.branding p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    margin-top: 5px;
+    opacity: 1;
+}
+
+
+/* Form Container */
+.form-container {
+    font-family: "Times New Roman", Times, serif;
+    position: absolute;
+    bottom: 10%; /* Placed slightly above bottom-right */
+    right: 3%;
+    width: 320px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 70%;
+    padding: 10px 40px;
+    font-size: 16px;
+    border: 2px solid #d4af89;
+    border-radius: 8px;
+    background: #fffaf0;
+}
+
+/* Gear Icons */
+.gear {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#gear3 {
+    right: 10px;
+}
+
+/* Gear Animation */
+.rotate {
+    transform: translateY(-50%) rotate(360deg);
+}
+
+/* Adjust the form heading (Login text) */
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Adjust input fields */
+.input-group {
+    margin-bottom: 15px; /* Reduce gap */
+}
+
+/* Ensure "Sign up" link is inside the form */
+.sign-up-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Adjust submit button positioning */
+#submit-btn {
+    display: block;
+    margin: 15px auto 10px; /* Adjust margin */
+}
+
+/* Gear rotation animation */
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+.rotating {
+    animation: spin 0.5s linear infinite;
+}
+
+
+/* Submit Button */
+#submit-btn {
+    background-color: #d4a373;
+    color: white;
+    bottom: 8%; /* Placed slightly above bottom-right */
+    right: 4%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Active Submit Button */
+#submit-btn.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Disappear Animation */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(50px); }
+}
+
+.slide-out-right {
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in-out;
+}
+
+.swirl-out {
+    animation: swirlOut 1.2s ease-in-out forwards;
+}
+
+@keyframes swirlOut {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(20deg) scale(1.1); }
+    100% { transform: rotate(-360deg) scale(0); }
+}
+

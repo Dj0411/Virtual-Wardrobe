@@ -1,0 +1,156 @@
+/* Header Styling */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+/* Header Left - Project Title */
+.header-left h1 {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* Header Right - Welcome Message and Links */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.header-right a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Ensure body takes full height and has background */
+body {
+    background: url("../images/home-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 70px; /* Adjust based on header height */
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Virtual Try-On Section */
+.try-on-container {
+    margin-top: 80px;  /* Adjust this value as needed */
+}
+
+/* My Wardrobe Section */
+.wardrobe-container {
+    margin-top: 40px;  /* Adjust this value to bring the section up/down */
+}
+
+/* General container styling */
+.container {
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Cards styling */
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 23%;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Overlay effect */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap');
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif; /* Stylish Font */
+    letter-spacing: 1px;
+}
+
+/* Left & Right Alignment */
+.footer-left {
+    margin-left: 20px;
+}
+
+.footer-right {
+    margin-right: 20px;
+}

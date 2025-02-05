@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-On Result - Virtual Wardrobe</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tryon.css') }}">
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='images/home-bg.jpg') }}'); background-size: cover; background-position: center;">
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1 onclick="window.location.href='{{ url_for('home') }}'">Echo View</h1>
+        </div>
+        <div class="header-right">
+            <a href="{{ url_for('home') }}" class="btn btn-outline-light">Home</a>
+            <a href="{{ url_for('profile') }}" class="btn btn-outline-light">Profile</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+        </div>
+    </header>
+
+    <!-- Try-On Section -->
+    <div class="container tryon-container">
+        <h2 class="text-center">Virtual Try-On</h2>
+
+        <!-- Upload Form -->
+        <form action="{{ url_for('try_on') }}" method="POST" enctype="multipart/form-data" class="upload-form">
+            <label for="user_image">Upload Your Image:</label>
+            <input type="file" name="user_image" accept="image/*" required>
+
+            <label for="outfit_image">Upload Outfit Image:</label>
+            <input type="file" name="outfit_image" accept="image/*" required>
+
+            <button type="submit" class="btn btn-primary w-100">Try On</button>
+        </form>
+
+        {% if result_image_path %}
+        <div class="result-container">
+            <h3 class="text-center">Try-On Result</h3>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h5>Your Image</h5>
+                    <img src="{{ url_for('static', filename=user_image_path) }}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>Outfit Image</h5>
+                    <img src="{{ url_for('static', filename=outfit_image_path) }}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>Result</h5>
+                    <img src="{{ url_for('static', filename=result_image_path) }}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
