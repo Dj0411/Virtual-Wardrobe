@@ -33,3 +33,21 @@ Future Enhancements
 Improve the virtual try-on system using AI techniques like OpenPose or DensePose for better outfit alignment.
 Add cloud storage for outfit image uploads.
 Enhance UI/UX with advanced animations and transitions.
+
+
+### Prerequisites
+
+1. Install Python 3.8 or above.
+2. Install MySQL on your local machine and set up a database for the project.
+
+### Install Dependencies
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/virtual-wardrobe.git
+cd virtual-wardrobe
+
+Create a virtual environment and activate it:
+python3 -m venv venv
+source venv/bin/activate  # For Windows, use venv\Scripts\activate
